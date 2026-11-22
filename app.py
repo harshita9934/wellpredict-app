@@ -27,12 +27,14 @@ app.add_middleware(
 # ----------------- Model & Scaler Discovery -----------------
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 possible_model_paths = [
+    os.path.join(BASE_DIR, "bayesian_model.pkl"),
     os.path.join(BASE_DIR, "Notebooks", "models", "bayesian_model.pkl"),
     os.path.join(BASE_DIR, "models", "bayesian_model.pkl"),
     os.path.join(BASE_DIR, "..", "Notebooks", "models", "bayesian_model.pkl"),
     os.path.join(BASE_DIR, "Mental_Wellbeing_Score_Project", "Notebooks", "models", "bayesian_model.pkl")
 ]
 possible_scaler_paths = [
+    os.path.join(BASE_DIR, "scaler.pkl"),
     os.path.join(BASE_DIR, "Notebooks", "models", "scaler.pkl"),
     os.path.join(BASE_DIR, "models", "scaler.pkl"),
     os.path.join(BASE_DIR, "..", "Notebooks", "models", "scaler.pkl"),
